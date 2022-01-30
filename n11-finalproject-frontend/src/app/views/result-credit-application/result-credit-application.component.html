@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="d-flex justify-content-center pt-5">
+    <div class=" w-25 mx-3">
+      <input type="text" class="form-control" id="identityNumber" placeholder="Tc Kimlik Numarası" maxlength="11"
+        (input)="resetMessage()" minlength="11" [(ngModel)]="identityNumber">
+    </div>
+    <div class="form-group w-25">
+      <input class="form-control" id="birthDate" placeholder="Doğum Tarihi yyyy-mm-dd" [(ngModel)]="datepickerValue"
+        required [readonly]="foundCustomer" ngbDatepicker #d="ngbDatepicker" (click)="openDatePicker(d)">
+    </div>
+    <button type="submit" class="btn btn-primary ms-4" [disabled]="identityNumber.length!=11 || !datepickerValue.year"
+      (click)="getCreditApplicationResult()">Sorgula</button>
+  </div>
+  <div class="text-center pt-3" style="height: 20px;">
+    <small *ngIf="!foundCustomer && identityNumber.length==11" class="text-danger">{{foundCustomerMessage}}</small>
+  </div>
+  <div class="container">
+    <div class="m-3 text-center" >
+      <div class="alert alert-success" role="alert" *ngIf="applicationresult?.enumApplicationResult=='APPROVED'" >
+        Kredi Başvurusu Onaylandı Kredi Limit :<b>{{applicationresult?.creditLimit}}</b>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="applicationresult?.enumApplicationResult=='NOTAPPROVED'">
+       Kredi Başvurusu Onaylanmadı ({{applicationresult?.description}})
+      </div>
+    </div>
+  </div>
+</div>
