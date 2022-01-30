@@ -76,7 +76,7 @@ export class CreditApplicationComponent implements OnInit {
     return returndate
   }
   convertDatePickerToDate(datepickerValue) {
-    const date = new Date(`${datepickerValue.year}-${datepickerValue.month}-${datepickerValue.day}`);
+    const date = new Date(`${datepickerValue.year}-${datepickerValue.month}-${datepickerValue.day+1}`);
     return date
   }
   resetMessage() {
