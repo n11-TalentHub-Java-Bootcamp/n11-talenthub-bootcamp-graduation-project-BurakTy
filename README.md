@@ -17,3 +17,6 @@ Database olarak PostgreSql Kullanılmıştır.
 - Backend kısmını build/run etmeden önce  PostgreSql de N11_FINALPROJECT isimli bir veritabanı oluşturulması gerekmekte. Veritabanı bağlantı bilgileri _src/main/resources/applicationçproperites_ içinde bulunmaktadır
 - proje localhost:8082 çalışmaktadır.
     
+
+
+##### Projeler için dockerfile ve docker-compose dosyaları oluşturulmuştur ancak backend ve postgreSql birbiriyle iletişim kuramadığı için backend kısmı hata vermekte  
