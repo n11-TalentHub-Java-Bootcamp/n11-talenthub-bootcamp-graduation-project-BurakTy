@@ -16,6 +16,7 @@ Database olarak PostgreSql Kullanılmıştır.
 - Backend kısmını bir ide ( intellj Idea kullanılmıştır ) kullanarak çalıştırmanız gerekmekte 
 - Backend kısmını build/run etmeden önce  PostgreSql de N11_FINALPROJECT isimli bir veritabanı oluşturulması gerekmekte. Veritabanı bağlantı bilgileri _src/main/resources/applicationçproperites_ içinde bulunmaktadır
 - proje localhost:8082 çalışmaktadır.
+- Proje içerisinde geri bildirim olarak mail kullanılmıştır.
     
 
 
